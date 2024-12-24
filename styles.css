@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Header Styles */
+  header {
+    background: linear-gradient(to right, #007BFF, #00C6FF);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Section Styles */
+  section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px 0;
+  }
+/* Hover Effects for Navigation */
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #FFD700; /* Golden color */
+  }
+  
+  /* Section Hover Effect */
+  section:hover {
+    transform: scale(1.02); /* Slight zoom effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Elevated shadow */
+  }
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+      display: block;
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    section {
+      margin: 10px 0;
+    }
+  }
+/* Button Styles */
+.btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Darker blue */
+    transform: scale(1.1); /* Slightly enlarge */
+  }
+  header {
+    background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+          /* Contact Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  form input:focus, form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  form button {
+    align-self: flex-start;
+    background-color: #28a745; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #218838;
+  }
+/* Add hover effect to button */
+form button:hover {
+    background-color: #1e7e34;
+    transform: scale(1.05);
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  /* Input focus effect */
+  form input:focus, form textarea:focus {
+    background-color: #f0f8ff;
+    border-color: #007bff;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+/* Add hover effect to button */
+form button:hover {
+    background-color: #1e7e34;
+    transform: scale(1.05);
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  /* Input focus effect */
+  form input:focus, form textarea:focus {
+    background-color: #f0f8ff;
+    border-color: #007bff;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+      /* Add hover effect to button */
+form button:hover {
+  background-color: #1e7e34;
+  transform: scale(1.05);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Input focus effect */
+form input:focus, form textarea:focus {
+  background-color: #f0f8ff;
+  border-color: #007bff;
+  transition: background-color 0.3s, border-color 0.3s;
+}

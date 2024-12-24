@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My New Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>This is a brand-new website created from scratch!</p>
+    </section>
+    <section id="services">
+      <h2>Our Services</h2>
+      <p>We offer amazing services for your needs.</p>
+    </section>
+    <section id="contact">
+  <h2>Contact Us</h2>
+  <form action="https://formspree.io/f/mvgggpve" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
+
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+  </footer>
+  <script>
+    // Get form elements
+    const form = document.querySelector('form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+  
+    // Function to show error
+    function showError(input, message) {
+      input.style.borderColor = 'red';
+      const error = input.nextElementSibling;
+      if (!error || error.className !== 'error') {
+        const errorElement = document.createElement('small');
+        errorElement.className = 'error';
+        errorElement.style.color = 'red';
+        errorElement.textContent = message;
+        input.insertAdjacentElement('afterend', errorElement);
+      }
+    }
+  
+    // Function to clear error
+    function clearError(input) {
+      input.style.borderColor = '';
+      const error = input.nextElementSibling;
+      if (error && error.className === 'error') {
+        error.remove();
+      }
+    }
+  
+    // Validate Email
+    function isValidEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+  
+    // Add input event listeners
+    nameInput.addEventListener('input', () => {
+      if (nameInput.value.trim() === '') {
+        showError(nameInput, 'Name is required');
+      } else {
+        clearError(nameInput);
+      }
+    });
+  
+    emailInput.addEventListener('input', () => {
+      if (emailInput.value.trim() === '') {
+        showError(emailInput, 'Email is required');
+      } else if (!isValidEmail(emailInput.value)) {
+        showError(emailInput, 'Enter a valid email');
+      } else {
+        clearError(emailInput);
+      }
+    });
+  
+    messageInput.addEventListener('input', () => {
+      if (messageInput.value.trim() === '') {
+        showError(messageInput, 'Message is required');
+      } else {
+        clearError(messageInput);
+      }
+    });
+  
+    // Prevent form submission if there are errors
+    form.addEventListener('submit', (e) => {
+      if (
+        nameInput.value.trim() === '' ||
+        emailInput.value.trim() === '' ||
+        messageInput.value.trim() === '' ||
+        !isValidEmail(emailInput.value)
+      ) {
+        e.preventDefault();
+        alert('Please fill out the form correctly.');
+      }
+    });
+    <script>
+  // Select the form and input fields
+  const form = document.querySelector("form");
+  const emailInput = document.getElementById("email");
+  const nameInput = document.getElementById("name");
+  const messageInput = document.getElementById("message");
+
+  // Add an event listener to validate the email in real-time
+  emailInput.addEventListener("input", () => {
+    const emailValue = emailInput.value;
+    const emailError = document.getElementById("emailError");
+
+    if (!emailValue.includes("@") || !emailValue.includes(".")) {
+      if (!emailError) {
+        const error = document.createElement("p");
+        error.id = "emailError";
+        error.style.color = "red";
+        error.textContent = "Please enter a valid email address.";
+        emailInput.parentNode.insertBefore(error, emailInput.nextSibling);
+      }
+    } else if (emailError) {
+      emailError.remove();
+    }
+  });
+
+  // Add event listener to prevent empty field submission
+  form.addEventListener("submit", (e) => {
+    const nameValue = nameInput.value.trim();
+    const messageValue = messageInput.value.trim();
+
+    if (nameValue === "" || messageValue === "") {
+      e.preventDefault(); // Stop form submission
+      alert("All fields are required!");
+    }
+  });
+</script>
+</script>
+  </body>
+</html>
+<section id="about">
+    <h2>About Us</h2>
+    <p>This is a brand-new website created from scratch!</p>
+    <button class="btn">Learn More</button>
+  </section>
+  
